@@ -1,9 +1,15 @@
 # Apache HTTP Mod Security
-## Tags : plugin   apache   httpd  
 
-## Category: plugin
+See http://uptimesoftware.github.io for more information.
 
-##Version Compatibility<br/>Module Name</th><th>up.time Monitoring Station Version</th>
+### Tags 
+ plugin   apache   httpd  
+
+### Category
+
+{ page.category }}
+
+### Version Compatibility
 
 
   
@@ -11,15 +17,32 @@
   
 
 
-### Description: Apply an extra layer of security on top of Apache. This mod can block XSS (Cross Site Scripting) attacks as well as other known HTTP vulnerabilities. For more information on Mod Security, see http://www.modsecurity.org
+### Description
+Apply an extra layer of security on top of Apache. This mod can block XSS (Cross Site Scripting) attacks as well as other known HTTP vulnerabilities. For more information on Mod Security, see http://www.modsecurity.org
 
-### Supported Monitoring Stations: 7.2, 7.1, 7.0, 6.0, 5.5, 5.4, 5.3
-### Supported Agents: None; no agent required
-### Installation Notes: <p>n/a</p>
 
-### Dependencies: <p>Apache</p>
+### Supported Monitoring Stations
 
-### Input Variables: 
-### Output Variables: 
-### Languages Used: 
+7.2, 7.1, 7.0, 6.0, 5.5, 5.4, 5.3
+
+### Supported Agents
+None; no agent required
+
+### Installation Notes
+<p>n/a</p>
+
+
+### Dependencies
+<p>Apache</p>
+
+
+### Input Variables
+
+
+### Output Variables
+
+
+
+### Languages Used
+
 
