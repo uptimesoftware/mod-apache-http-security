@@ -1,4 +1,6 @@
-##APACHE CONFIGURATION
+------------------------
+- APACHE CONFIGURATION -
+------------------------
 
 Edit the file <uptime_dir>/apache/conf/httpd.conf and add the following section to the bottom of the file (for simplicity):
 
@@ -13,8 +15,9 @@ LoadModule security2_module modules/mod_security2.so
 </IfModule>
 
 
-
-##TESTING
+-----------
+- TESTING -
+-----------
 
 Enter the following in a browser, replacing "uptime-hostname" with the hostname:port of your up.time monitoring station:
 
