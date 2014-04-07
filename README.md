@@ -1,1 +1,29 @@
-# Apache HTTP Mod Security
+##APACHE CONFIGURATION
+
+Edit the file <uptime_dir>/apache/conf/httpd.conf and add the following section to the bottom of the file (for simplicity):
+
+# Load mod_security module
+LoadModule unique_id_module modules/mod_unique_id.so
+LoadModule security2_module modules/mod_security2.so
+<IfModule mod_security2.c>
+    # set the default action to deny access if a rule is triggered (403: Forbidden error)
+    SecDefaultAction phase:2,deny,status:403,log,auditlog
+    # include all *.conf files in the modsecurity_rules directory
+    Include /usr/local/uptime/apache/conf/modsecurity_rules/*.conf
+</IfModule>
+
+
+
+##TESTING
+
+Enter the following in a browser, replacing "uptime-hostname" with the hostname:port of your up.time monitoring station:
+
+http://uptime-hostname:9999/index.php?m=<script>alert(document.cookie)</script>
+
+If you get a "Forbidden" error message that is confirmation that mod_security is setup and working properly.
+
+To confirm if the module is loaded, create a file in "<uptime_dir>/GUI" named phpinfo.php and place the following line in the file:
+<? phpinfo(); ?>
+
+Then just access the page with the URL:
+http://uptime-hostname:9999/phpinfo.php
